@@ -1,2 +1,2 @@
 # cursonode
-Rpositório - Web FrontEnd para OTC
+Repositório - Web FrontEnd para OTC
