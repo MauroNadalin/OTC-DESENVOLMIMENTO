@@ -1,32 +1,32 @@
 <?php
 // Configuração de conexão com o banco de dados
-$servername = "localhost";
-$username = "root"; // Altere para o usuário do MySQL
-$password = ""; // Altere para a senha do MySQL
-$database = "sistema";
+//$servername = "localhost";
+//$username = "root"; // Altere para o usuário do MySQL
+//$password = "SaU52GRO$$0"; // Altere para a senha do MySQL
+//$database = "sistema";
 
-$conn = new mysqli($servername, $username, $password, $database);
+//$conn = new mysqli($servername, $username, $password, $database);
 
 // Verifica conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+//if ($conn->connect_error) {
+//    die("Conexão falhou: " . $conn->connect_error);
+//}
 
 // Manipulação de entrada de dados
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nome"], $_POST["email"])) {
-    $nome = $conn->real_escape_string($_POST["nome"]);
-    $email = $conn->real_escape_string($_POST["email"]);
+//if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nome"], $_POST["email"])) {
+ //   $nome = $conn->real_escape_string($_POST["nome"]);
+  //  $email = $conn->real_escape_string($_POST["email"]);
 
-    $sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
-    if ($conn->query($sql) === TRUE) {
-        echo "<p>Cadastro realizado com sucesso!</p>";
-    } else {
-        echo "<p>Erro: " . $conn->error . "</p>";
-    }
+  //  $sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
+    //if ($conn->query($sql) === TRUE) {
+      //  echo "<p>Cadastro realizado com sucesso!</p>";
+    //} else {
+      //  echo "<p>Erro: " . $conn->error . "</p>";
+    //}
 }
 
 // Consulta para exibir os registros
-$result = $conn->query("SELECT * FROM usuarios");
+//$result = $conn->query("SELECT * FROM usuarios");
 ?>
 
 <!DOCTYPE html>
